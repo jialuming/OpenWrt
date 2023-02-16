@@ -89,7 +89,7 @@ jobs:
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
         git clone $BREAKING_REPO_URL -b $BREAKING_REPO_BRANCH breaking_openwrt
         ln -sf /workdir/breaking_openwrt $GITHUB_WORKSPACE/breaking_openwrt
-        cp /workdir/breaking_openwrt/general $GITHUB_WORKSPACE/general
+        cp -r /workdir/breaking_openwrt/general $GITHUB_WORKSPACE/general
         cd openwrt
         useVersionInfo=$(git show -s --date=short --format="Author: %an<br/>date: %cd<br/>commit: %s<br/>commit hash: %H")
         echo "useVersionInfo=$useVersionInfo" >> $GITHUB_ENV
