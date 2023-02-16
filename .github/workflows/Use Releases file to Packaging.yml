@@ -72,7 +72,7 @@ jobs:
       env:
         OPENWRT_ARMVIRT: https://github.com/jialuming/OpenWrt/releases/download/ARMv8_ROOTFS/openwrt-rockchip-armv8-fastrhino_r68s-rootfs.tar.gz
         PACKAGE_SOC: r68s
-        WHOAMI: breakings
+        WHOAMI: jialuming
         KERNEL_REPO_URL: https://github.com/breakings/OpenWrt/tree/main/opt
         KERNEL_VERSION_NAME: 5.15.87_6.1.5
         #OPENWRT_VER: R21.12.1
