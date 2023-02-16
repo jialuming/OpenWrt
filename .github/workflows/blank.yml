@@ -87,7 +87,7 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        git clone $BREAKING_REPO_URL -b $BREAKING_REPO_BRANCH openwrt
+        git clone $BREAKING_REPO_URL -b $BREAKING_REPO_BRANCH breaking_openwrt
         ln -sf /workdir/breaking_openwrt $GITHUB_WORKSPACE/breaking_openwrt
         cd openwrt
         useVersionInfo=$(git show -s --date=short --format="Author: %an<br/>date: %cd<br/>commit: %s<br/>commit hash: %H")
