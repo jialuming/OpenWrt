@@ -30,6 +30,7 @@ env:
   CONFIG_FILE: r68s.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
+  UPLOAD_OPENWRT_DIR: true
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
@@ -132,7 +133,14 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
+        
+    - name: Upload firmware directory
+      uses: actions/upload-artifact@main
+      if: env.UPLOAD_OPENWRT_DIR == 'true' && steps.organize.outputs.status == 'success' && !cancelled()
+      with:
+        name: OpenWrt${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        path: openwrt
+        
     - name: Compile the firmware
       id: compile
       run: |
