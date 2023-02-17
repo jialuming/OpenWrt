@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt ARMV8_Rootfs
+name: Build OpenWrt rockchip_Rootfs
 
 on:
   repository_dispatch:
@@ -35,8 +35,8 @@ env:
   UPLOAD_FIRMWARE: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  FILE_NAME: ARMv8_ROOTFS
-  PRODUCT_NAME: ARMv8_ROOTFS
+  FILE_NAME: Rockchip_Rootfs
+  PRODUCT_NAME: Rockchip_Rootfs
 
 jobs:
   build:
