@@ -134,9 +134,9 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
         
-    - name: Upload firmware directory
+    - name: Upload openwrt directory
       uses: actions/upload-artifact@main
-      if: env.UPLOAD_OPENWRT_DIR == 'true' && steps.organize.outputs.status == 'success' && !cancelled()
+      if: env.UPLOAD_OPENWRT_DIR == 'true' && !cancelled()
       with:
         name: OpenWrt${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: openwrt
