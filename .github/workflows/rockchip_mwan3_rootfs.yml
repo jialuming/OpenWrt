@@ -35,8 +35,8 @@ env:
   UPLOAD_FIRMWARE: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  FILE_NAME: Rockchip_Rootfs
-  PRODUCT_NAME: Rockchip_Rootfs
+  FILE_NAME: Rockchip_MWan3_Rootfs
+  PRODUCT_NAME: Rockchip_MWan3_Rootfs
 
 jobs:
   build:
