@@ -29,7 +29,7 @@ env:
   RECENT_LASTEST: 30
   TZ: Asia/Shanghai
   FILE_NAME: armv8_mini
-  PRODUCT_NAME: ARMv8_mini
+  PRODUCT_NAME: ARMv8_mwan3_mini
 
 jobs:
   build:
